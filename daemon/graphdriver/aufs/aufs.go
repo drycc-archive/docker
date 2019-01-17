@@ -43,7 +43,7 @@ import (
 	mountpk "github.com/docker/docker/pkg/mount"
 	"github.com/docker/docker/pkg/stringid"
 
-	"github.com/opencontainers/runc/libcontainer/label"
+	"github.com/opencontainers/selinux/go-selinux/label"
 )
 
 var (
