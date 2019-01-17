@@ -80,8 +80,8 @@ func SetWinsize(fd uintptr, ws *Winsize) error {
 	}
 
 	// Narrow the sizes to that used by Windows
-	width := winterm.SHORT(ws.Width)
-	height := winterm.SHORT(ws.Height)
+	width := int16(ws.Width)
+	height := int16(ws.Height)
 
 	// Set the dimensions while ensuring they remain within the bounds of the backing console buffer
 	// -- Shrinking will always succeed. Growing may push the edges past the buffer boundary. When that occurs,
